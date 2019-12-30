@@ -1,0 +1,39 @@
+<div class="home-banner">
+  <div class="home-container">
+
+    <h1>Welcome to EatGreen</h1>
+
+    <p>Fill in the form below in order to see how your diet affects the planet!</p>
+
+    <form action="{% url 'calculator:result' food.id %}">
+      <select name="food" id="food">
+        <option value="beef">beef</option>
+        <option value="lamb">lamb</option>
+        <option value="farmed salmon">farmed salmon</option>
+        <option value="cheese">cheese</option>
+        <option value="turkey">turkey</option>
+        <option value="chicken">chicken</option>
+        <option value="canned tuna">canned tuna</option>
+        <option value="eggs">eggs</option>
+        <option value="potatoes">potatoes</option>
+        <option value="rice">rice</option>
+        <option value="peanut butter">peanut butter</option>
+        <option value="nuts">nuts</option>
+        <option value="yogurt">yogurt</option>
+        <option value="broccoli">broccoli</option>
+        <option value="tofu">tofu</option>
+        <option value="dry beans">dry beans</option>
+        <option value="milk">milk</option>
+        <option value="lentils">lentils</option>
+        <option value="tomatoes">tomatoes</option>
+      </select>
+
+      <input type="submit">
+    </form>
+  </div>
+
+</div>
+
+{% for food in foods %}
+  {{ food.name }}
+{% endfor %}
