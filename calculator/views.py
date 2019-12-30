@@ -10,4 +10,4 @@ def index(request):
   return render(request, 'calculator/index.html', context)
 
 def result(request):
-  return render(request, 'calculator/result.html')
+  return HttpResponseRedirect(reverse('calculator:result'), args=(food.id))
